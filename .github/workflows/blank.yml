@@ -33,3 +33,4 @@ jobs:
           echo test, and deploy your project.
           echo ${{ secrets.TEST_SECRETS }}
           echo OPIPI
+          echo test
