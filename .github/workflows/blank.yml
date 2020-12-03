@@ -33,3 +33,6 @@ jobs:
           chmod +x ~/bin/digdag
           echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
           source ~/.bashrc
+          digdag init mydag
+          cd mydag
+          digdag run mydag.dig
