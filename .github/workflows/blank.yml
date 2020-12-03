@@ -29,13 +29,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install digdag
         run: |
-          curl -o $HOME/digdag --create-dirs -L "https://dl.digdag.io/digdag-latest"
-          chmod +x $HOME/digdag
+          curl -o $HOME/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-latest"
+          chmod +x $HOME/bin/digdag
           echo "$HOME/bin" >> $GITHUB_PATH
           
       - name: Run digdag
         run: |
-          echo $GITHUB_PATH
           digdag init mydag 
           cd mydag
           digdag run mydag.dig
